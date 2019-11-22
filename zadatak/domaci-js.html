@@ -7,6 +7,39 @@
 </head>
 <body>
 
-    <input type="button" name="dugme" value="Klikni me" onClick="racunaj()">
+<input type="button" name="pisi" value="Otvori"	onClick="otvori()"><br><br><br><br>
+     
+    <form>
+            <fieldset style="width: 30%">
+                <legend>Personalne informacije</legend>
+             Ime: <br><input class="ime" type="text" name="korisnickoIme" size="30" maxlength="15"><br><br>
+<!--             Prezime: <br><input type="text" name="korisnickoPrezime"size="30"><br><br>-->
+<!--
+            E-mail: <br><input type="email" name="email"size="30"><br><br>
+                Datum početka obuke: <input type="date" name="datum"><br><br>
+-->
+                
+            <input type="Button" value="Pošalji" onclick="ofarbaj()">
+
+ <script>
+function ofarbaj() {
+    var tekstZaPrikaz = document.getElementsByClassName("korisnickoIme")[0];
+//    alert(tekstZaPrikaz);
+//    document.getElementsByTagName("p")[1].innerHTML="Ovo je moj tekst";
+//    document.getElementsByTagName("p")[1].style.color = "red";
+    if tekstZaPrikaz=""{
+        
+    }
+    tekstZaPrikaz.style.backgroundColor="red";
+}
+</script>
+            <input type="reset" value="Obriši">
+
+            </fieldset>
+
+        </form>
+      
+       
+    
 </body>
 </html>
