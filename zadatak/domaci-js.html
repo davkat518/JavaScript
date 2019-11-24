@@ -7,10 +7,10 @@
 </head>
 <body>
 <h1>Praktican deo JavaScript <span>
-<!--<input type="text" name="vreme" placeholder="vreme()">-->
-<SCRIPT LANGUAGE="JavaScript">
 
-document.write("Vreme:" +document.getTime()+" <BR>");
+<SCRIPT LANGUAGE="JavaScript">
+sada =new Date();
+document.write("Trenutno vreme je:" + sada.getHours() + ":" +  sada.getMinutes()  + "<br>");
 
 </SCRIPT>
 </span></h1>
@@ -33,8 +33,9 @@ function ofarbajPolje() {
     var str = new String();
          var n=str.length;
     if (n<1){
+        alert("Niste uneli vrednost");
         
-    document.getElementById("ime").style.backgroundColor = "yellow";
+    document.getElementById("ime").style.backgroundColor = "red";
 }}
 </script>
             <input type="reset" value="Obriši">
