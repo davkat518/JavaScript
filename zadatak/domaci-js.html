@@ -10,7 +10,7 @@
 
 <SCRIPT LANGUAGE="JavaScript">
 sada =new Date();
-document.write("Trenutno vreme je:" + sada.getHours() + ":" +  sada.getMinutes()  + "<br>");
+document.write("  Trenutno vreme je:" + sada.getHours() + ":" +  sada.getMinutes()  + "<br>");
 
 </SCRIPT>
 </span></h1>
@@ -34,9 +34,9 @@ function ofarbajPolje() {
          var n=str.length;
     if (n<1){
         alert("Niste uneli vrednost");
-        
-    document.getElementById("ime").style.backgroundColor = "red";
-}}
+        document.getElementById("ime").style.backgroundColor = "red";
+    }
+}
 </script>
             <input type="reset" value="Obriši">
 
@@ -44,7 +44,8 @@ function ofarbajPolje() {
 
         </form>
       <br><br>
-     <input type="Button" value="Promeni pozadinu" onclick="ofarbajPozadinu()">
+     <input type="Button" value="Promeni pozadinu" onclick="ofarbajPozadinu()"><br><br>
+     <input type="button" value="Stampaj" onclick="ispisi()">
     
 </body>
 </html>

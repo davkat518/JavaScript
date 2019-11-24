@@ -15,7 +15,6 @@ alert("Rezultat je "+rezultat);
 
  function otvori() {
      window.open("Reklama.html", "_blank", "width=320,height=250");
-//     setTimeout('zatvori()', 6000);
 
     }
 
@@ -25,3 +24,12 @@ function ofarbajPozadinu(){
 
     document.body.style.backgroundColor = boja;
 }
+
+function ispisi() {
+//    for (var i = 0; i < input.length; i++) {
+//                text =text + input[i] + ", ";
+//            }
+     var a= document.getElementsByTagName("input");
+    console.log(a);
+    }
+
