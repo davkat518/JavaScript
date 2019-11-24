@@ -28,3 +28,22 @@ alert("Rezultat je "+rezultat);
     }
 
 
+function vreme() {
+
+//      var time = vreme.getTime();
+//    document.write (time);
+//      var sati = vreme.getHours();
+//      var minuta = vreme.getMinutes();
+//      var sekundi = vreme.getSeconds();
+//
+//      var tacnoVreme = sati+":"+minuta+""+sekundi;
+//      document.tacnoVreme.value = tacnoVreme;
+//    console.log(tacnoVreme);
+    var d = new Date();
+document.getElementById("vreme").innerHTML = d.innerHTML;
+}
+function ofarbajPozadinu(){
+    boja= prompt("Izaberi boju");
+
+    document.body.style.backgroundColor = boja;
+}
