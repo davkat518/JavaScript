@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Praktican deo</title>
+<script src="script.js"></script>
 <script>
 
 //    4 zadatak
@@ -11,43 +12,71 @@
 
     function otvori(){
     prozor = window.open('reklama.html', '_blank', 'width=320,height=250');
+        setTimeout('zatvori()', 6000);
     }
 
     function zatvori(){
         prozor.close();
     }
 
-
-
-
     </script>
+     
 
 
 </head>
 <body>
-<h1>Praktican deo JavaScript</h1>
+<h1>Praktican deo JavaScript<span id="vreme">
+    <SCRIPT LANGUAGE="JavaScript">
+sada =new Date();
+document.write("  Trenutno vreme je " + sada.getHours() + ":" +  sada.getMinutes() + ":" + sada.getSeconds());
+
+</SCRIPT>
+    
+</span></h1>
+
+<input type="button" name="pisi" value="Otvori"	onClick="otvori()"><br><br><br><br>
 
 <h3>Unesite podatke za rezervaciju</h3>
   <form>
      <label for="ime">Ime</label>
-     <input id="ime" name="ime"> <br>
+     <input id="ime" name="ime"> <br><br>
 
      <label for="prezime">Prezime</label>
-     <input id="prezime" name="prezime"><br>
+     <input id="prezime" name="prezime"><br><br>
 
      <label for="adresa">Adresa</label>
-     <input id="adresa" name="adresa"><br>
+     <input id="adresa" name="adresa"><br><br>
 
      <label for="telefon">Telefon</label>
-     <input id="telefon" name="telefon"><br>
+     <input id="telefon" name="telefon"><br><br>
 
      <label for="rezervacija">Rezervacija</label><br>
-     <textarea id="rezervacija" name="rezervacija" cols="50" rows="7"></textarea><br>
+     <textarea id="rezervacija" name="rezervacija" cols="50" rows="7"></textarea><br><br>
 
-     <input type="button" value="Obrisi">
-     <input type="button" value="Pošalji">
-     <input type="button" value="Štampaj">
+     <input type="button" value="Obrisi" onclick="obrisi()">
+     
+     <input type="button" value="Pošalji" onclick="ofarbajPolje()">
+     <script ofarbajPolje()>
+
+         function ofarbajPolje() {
+             var str = document.getElementById("ime")[1].Value;
+             
+             var n=str.length;
+//             console.log(str);
+         if (n<1){
+             alert("Niste uneli vrednost");
+             document.getElementById("ime").style.backgroundColor = "red";
+    }else{
+        alert("Uneli ste vrednost");
+             document.getElementById("ime").style.backgroundColor = "yellow";
+    }
+}
+</script>
+     <input type="button" value="Štampaj" onclick="ispisi()">
      <input type="button" value="Kontakt podaci">
   </form>
+  <br><br>
+     <input type="Button" value="Promeni pozadinu" onclick="ofarbajPozadinu()"><br><br>
+    
 </body>
 </html>
