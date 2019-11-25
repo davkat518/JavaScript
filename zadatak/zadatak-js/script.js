@@ -13,7 +13,15 @@ treciBroj = 5;
 var rezultat = racunaj(4,6); 
 alert("Rezultat je "+rezultat);
 
+var trVreme= setInterval(vreme,1000);
+function vreme(){
+    
+    sada =new Date;
+    
+            document.getElementById("vreme").innerHTML=" Trenutno vreme je " + sada.getHours() + ":" + sada.getMinutes() + ":" + sada.getSeconds();
 
+}
+    
 
  function otvori() {
      window.open("Reklama.html", "_blank", "width=320,height=250");
