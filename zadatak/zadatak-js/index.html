@@ -25,33 +25,33 @@
 
 </head>
 <body>
-<h1>Praktican deo JavaScript<span id="vreme">
+<h1>Praktican deo JavaScript<span id="vreme"></span></h1>
     <SCRIPT LANGUAGE="JavaScript">
-sada =new Date();
-document.write("  Trenutno vreme je " + sada.getHours() + ":" +  sada.getMinutes() + ":" + sada.getSeconds());
+            sada =new Date();
+            document.getElementById("vreme").innerHTML="  Trenutno vreme je " + sada.getHours() + ":" +  sada.getMinutes() + ":" + sada.getSeconds();
 
-</SCRIPT>
+    </SCRIPT>
     
-</span></h1>
+
 
 <input type="button" name="pisi" value="Otvori"	onClick="otvori()"><br><br><br><br>
 
 <h3>Unesite podatke za rezervaciju</h3>
-  <form>
+  <form >
      <label for="ime">Ime</label>
-     <input id="ime" name="ime"> <br><br>
+     <input class="unos" id="ime" name="ime"> <br><br>
 
      <label for="prezime">Prezime</label>
-     <input id="prezime" name="prezime"><br><br>
+     <input class="unos" id="prezime" name="prezime"><br><br>
 
      <label for="adresa">Adresa</label>
-     <input id="adresa" name="adresa"><br><br>
+     <input class="unos" id="adresa" name="adresa"><br><br>
 
      <label for="telefon">Telefon</label>
-     <input id="telefon" name="telefon"><br><br>
+     <input class="unos" id="telefon" name="telefon"><br><br>
 
      <label for="rezervacija">Rezervacija</label><br>
-     <textarea id="rezervacija" name="rezervacija" cols="50" rows="7"></textarea><br><br>
+     <textarea class="unos" id="rezervacija" name="rezervacija" cols="50" rows="7"></textarea><br><br>
 
      <input type="button" value="Obrisi" onclick="obrisi()">
      
@@ -59,20 +59,21 @@ document.write("  Trenutno vreme je " + sada.getHours() + ":" +  sada.getMinutes
      <script ofarbajPolje()>
 
          function ofarbajPolje() {
-             var str = document.getElementById("ime")[1].Value;
-             
-             var n=str.length;
-//             console.log(str);
-         if (n<1){
-             alert("Niste uneli vrednost");
-             document.getElementById("ime").style.backgroundColor = "red";
-    }else{
+            if (typeof document.getElementById("ime") != 'undefined')
+//                var a = document.getElementsByClassName("unos")[i].value; 
+//                console.log(a);
+            {
         alert("Uneli ste vrednost");
              document.getElementById("ime").style.backgroundColor = "yellow";
+    }   else{
+              
+             alert("Niste uneli vrednost");
+             document.getElementById("ime").style.backgroundColor = "red";
     }
 }
 </script>
-     <input type="button" value="Štampaj" onclick="ispisi()">
+    
+     <input type="button" value="Štampaj"  onclick="stampaj()">
      <input type="button" value="Kontakt podaci">
   </form>
   <br><br>
