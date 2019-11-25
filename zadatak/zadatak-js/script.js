@@ -21,10 +21,17 @@ alert("Rezultat je "+rezultat);
     }
 
 function obrisi(){
-        var ime= document.getElementById("ime");
-        var prezime= document.getElementById("prezime");
-        ime.value="";
-        prezime.value="";
+//        var ime= document.getElementById("ime");
+//        var prezime= document.getElementById("prezime");
+//        ime.value="";
+//        prezime.value="";
+    var a = document.getElementsByClassName("unos");
+    for (var i=0; i<a.length; i++){
+                  
+                a[i].value="";
+                
+    }
+    
 
 }
 
@@ -36,17 +43,16 @@ function ofarbajPozadinu(){
 }
 
 function stampaj(){
-          
-          for (var i=0; i<6;){
-              if (typeof document.getElementsByClassName("unos")[i] != 'undefined'){
-                var a = document.getElementsByClassName("unos")[i].value; 
-                console.log(a);
-                i++
+          var a = document.getElementsByClassName("unos");
+          for (var i=0; i<6; i++){
+                  
+                console.log(a[i].value);
+                
               }
-          }       
+                
       }
 //function ispisi() {
-//    var a=document.getElementsById[i];
+//    var a=document.getElementsBy[i].value;
 //    var i;
 //    for (var i = 0; i < a.length; i++) {
 //                text =text + a[i] + ", ";

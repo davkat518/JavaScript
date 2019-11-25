@@ -27,8 +27,8 @@
 <body>
 <h1>Praktican deo JavaScript<span id="vreme"></span></h1>
     <SCRIPT LANGUAGE="JavaScript">
-            sada =new Date();
-            document.getElementById("vreme").innerHTML="  Trenutno vreme je " + sada.getHours() + ":" +  sada.getMinutes() + ":" + sada.getSeconds();
+            sada =new Date;
+            document.getElementById("vreme").innerHTML=" Trenutno vreme je " + sada.getHours() + ":" +  sada.getMinutes() + ":" + sada.getSeconds();
 
     </SCRIPT>
     
@@ -59,18 +59,18 @@
      <script ofarbajPolje()>
 
          function ofarbajPolje() {
-            if (typeof document.getElementById("ime") != 'undefined')
-//                var a = document.getElementsByClassName("unos")[i].value; 
-//                console.log(a);
-            {
-        alert("Uneli ste vrednost");
-             document.getElementById("ime").style.backgroundColor = "yellow";
-    }   else{
-              
-             alert("Niste uneli vrednost");
-             document.getElementById("ime").style.backgroundColor = "red";
+             var ime=document.getElementById("ime");
+            if (ime.value==""){
+                alert("Niste uneli vrednost");
+             ime.style.backgroundColor = "red";
+            }   else      {
+                alert("Uneli ste vrednost");
+             
+            }   
+            
+             
     }
-}
+
 </script>
     
      <input type="button" value="Štampaj"  onclick="stampaj()">
