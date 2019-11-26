@@ -17,8 +17,8 @@ var trVreme= setInterval(vreme,1000);
 function vreme(){
     
     sada =new Date;
-    
-            document.getElementById("vreme").innerHTML=" Trenutno vreme je " + sada.getHours() + ":" + sada.getMinutes() + ":" + sada.getSeconds();
+
+            document.getElementById("vreme").innerHTML=" Trenutno vreme je " + (sada.getHours() < 10? '0' : '')+sada.getHours() + ":" + (sada.getMinutes() < 10? '0' : '')+sada.getMinutes() + ":" + (sada.getSeconds() < 10? '0' : '')+sada.getSeconds();
 
 }
     
